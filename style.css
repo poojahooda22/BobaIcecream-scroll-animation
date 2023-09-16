@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Bebas Neue";
+    position: static;
+
+}
+
+#nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3em;
+}
+
+.left-nav {
+    font-size: 3vw;
+    color: white;
+    letter-spacing: .08vw;
+}
+
+.right-nav a {
+    font-size: 3vw;
+    text-decoration: none;
+    color: white;
+    margin-left: 1.5em;
+}
+
+.activities {
+    display: flex;
+    height: 100vh;
+    text-align: center;
+    transform: translateX(25%);
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.activity {
+    flex: 0 0 50%;
+    position: relative;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;   
+    cursor: pointer; 
+}
+.activity img {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.activity img.scene{
+    height: 20vw;
+}
+
+.activity img.item {
+    width: 14vw;
+}
+
+[data-item="popcorn"] {
+    color: #ef1525ff;
+   
+      
+}
+
+[data-item="bowling"] {
+    color: #ffc106ff;
+    
+    
+}
+
+[data-item="skate"] {
+    color: #604442ff;
+    
+    
+}
+[data-item="chess"] {
+    color: #bf4c6bff;
+   
+    
+}
+[data-item="popcorn"] img.item {
+    width: 12vw;
+  top: 19vw;
+}
+
+[data-item="bowling"] img.item {
+    width: 12vw;
+    top: 19vw;
+}
+
+[data-item="skate"] img.item {
+    width: 12vw;
+    top: 19vw;
+}
+
+[data-item="chess"] img.item {
+    width: 12vw;
+    top: 19vw;
+}
+
+span {
+    font-size: 1.8vw;
+}
+
+h2 { 
+    font-size: 14vw;
+    line-height: 2.2em;
+    text-transform: uppercase;
+    margin: -0.5em 0;
+    text-wrap: nowrap;
+    font-weight: 900;
+    position: relative;
+    z-index: -1;
+}
+h3 {
+    font-size: 3vw;
+    font-weight: 300;
+    
+}
+
+.context {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.active .context {
+    opacity: 100%;
+}
+
+.context,
+.context img {
+  transform: translateX(-10vw);
+  transition: transform 1s ease-out, opacity 400ms ease-out;
+}
+
+.active .context,
+.active .context img {
+  transform: translateX(0);
+  transition: transform 1s ease-out, opacity 400ms 300ms ease-out;
+}
+
+.active ~ .activity .context,
+.active ~ .activity .context img {
+  transform: translateX(10vw);
+}
+
+.background svg {
+    min-width: 100vw;
+    min-height: 250vh;
+    position: absolute;
+    animation: 1s forwards to-top;
+  }
+  
+  @keyframes to-top { 
+    from {
+      transform: translateY(0);
+    }
+  
+    to {
+      transform: translateY(-60%);
+    }
+  }
