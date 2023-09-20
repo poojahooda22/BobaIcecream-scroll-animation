@@ -55,7 +55,7 @@ body {
 }
 
 .activity img.scene{
-    height: 20vw;
+    height: 22vw;
 }
 
 .activity img.item {
@@ -85,22 +85,22 @@ body {
     
 }
 [data-item="popcorn"] img.item {
-    width: 12vw;
+    width: 14vw;
   top: 19vw;
 }
 
 [data-item="bowling"] img.item {
-    width: 12vw;
+    width: 14vw;
     top: 19vw;
 }
 
 [data-item="skate"] img.item {
-    width: 12vw;
+    width: 14vw;
     top: 19vw;
 }
 
 [data-item="chess"] img.item {
-    width: 12vw;
+    width: 14vw;
     top: 19vw;
 }
 
